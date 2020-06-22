@@ -6,6 +6,7 @@ const title = document.getElementById('title');
 const audio= document.getElementById('music');
 const image= document.getElementById('album-pic');
 const progress = document.getElementById('progress');
+const progressConatiner= document.querySelector('div.progress-container');
 
 
 let songs=['yaaron','in_the_name_of_Love','GOT']
@@ -28,6 +29,8 @@ function nextSong(){
     loadSong(songs[songIndex]);
     audio.play();
     playerContainer.classList.add('play');
+    playBtn.querySelector('i').classList.remove('fa-play');
+    playBtn.querySelector('i').classList.add('fa-pause');
 }
 function prevSong(){
     songIndex--;
@@ -37,10 +40,17 @@ function prevSong(){
     loadSong(songs[songIndex]);
     audio.play();
     playerContainer.classList.add('play');
+    playBtn.querySelector('i').classList.remove('fa-play');
+    playBtn.querySelector('i').classList.add('fa-pause');
 }
 //update progressbar and make it clickable
 function updateProgress(){
     progress.style.width= `${(audio.currentTime/audio.duration)*100}%`
+}
+function setProgress(e){
+    const clickPos = e.offsetX;
+    const width= this.clientWidth;
+    audio.currentTime=(clickPos/width)*audio.duration;
     
 }
 
@@ -51,16 +61,18 @@ playBtn.addEventListener('click',()=>{
     if (isPlaying) {
         playerContainer.classList.remove('play');
         audio.pause();
-        playBtn.querySelector('i').classList.remove('fa-play');
-        playBtn.querySelector('i').classList.add('fa-pause');
+        playBtn.querySelector('i').classList.add('fa-play');
+        playBtn.querySelector('i').classList.remove('fa-pause');
     } else {
         playerContainer.classList.add('play');
         audio.play();
-        playBtn.querySelector('i').classList.add('fa-play');
-        playBtn.querySelector('i').classList.remove('fa-pause');
+        playBtn.querySelector('i').classList.remove('fa-play');
+        playBtn.querySelector('i').classList.add('fa-pause');
         
     }
 });
 nextBtn.addEventListener('click',nextSong);
 prevBtn.addEventListener('click',prevSong);
 audio.addEventListener('timeupdate',updateProgress);
+audio.addEventListener('ended',nextSong);
+progressConatiner.addEventListener('click',setProgress);
