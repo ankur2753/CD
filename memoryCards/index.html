@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Cards</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+    
+    
+    <div class="cards-container">
+        <H1>Memory cards <button id="add-new-card" class="small"><i class="fa fa-plus"></i>Add New Card</button></H1>
+        <div class="cards-deck" id="cards-deck">
+            <div class="card">
+            <div class="card-front" id="card-front">What is gluons ?</div>
+            <div class="card-back" id="card-back">a quantum particle that holds everything together</div>
+            </div>
+            <!-- <div class="card">
+            <div class="card-front" id="card-front">What is quarks ?</div>
+            <div class="card-back" id="card-back">a quantum particle that makes up the matter(atoms and everything)</div>
+            </div> -->
+            <button class="small"><i class="fa fa-arrow-left"></i></button>
+            <button class="small"><i class="fa fa-arrow-right"></i></button>
+        </div>
+        <h1>Add New Card <button class="small" id="close"><i class="fa fa-close"></i></button> </h1>
+        <div class="add-card-container">
+          <label for="textarea">question <textarea  id="question" placeholder="write your question"></textarea></label>
+           <label for="textarea">answer</label> <textarea  id="answer" placeholder="answer..." ></textarea>
+            <button class="add-button" id="add-card"><i class="fa fa-plus"></i>Add Card</button>
+        </div>
+    </div>
+
+    <button id="clear" class="delete-all"><i class="fa fa-trash"></i>Clear All</button>
+</body>
+</html>
