@@ -6,6 +6,6 @@ I have created these  during my free time or in learning process
 
 [Hangman Game](https://github.com/ankur2753/CD/tree/master/hangman)
 
-[Incompletee MemoryCards](./tree/master/memoryCards)
+[Incompletee MemoryCards](./memoryCards/)
 
 
