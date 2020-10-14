@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BreakOut Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>BreakOut Game </h1>
+    <button id="show-btn" class="show btn">Show Rules</button>
+    <div class="how-to-play" id="how-to-play">
+        <h2>How to play</h2>
+        <p>Use left and right arrow keys for moving. <br> Try to prvent the ball from hitting the ground</p>
+        <p>If you hit the ground you score and the blocks resets.</p>
+        <br>If you break all the bricks you win otherwise you lose
+        <button id="close-btn" class="btn close">Close</button>
+    </div>
+
+ 
+
+    <canvas height="500" width="800" id="canvas"></canvas>
+
+    <button class="btn" id="play"><b style="font-size: 30px;">&#x25b6</b></button>
+
+    <div class="modal-container" id="modal-container">
+        <div class="modal" id="modal">
+            <h2>
+                <span id="msg1"></span>
+                <span id="msg2"></span>
+            </h2>
+            <button id="play-again" class="btn">
+                <h4>Play Again </h4>
+            </button>
+            <button id="cancel" class="btn">
+                <h4>Cancel</h4>
+            </button>
+        </div>
+    </div>
+
+    
+    <script src="script.js"></script>
+</body>
+
+</html>

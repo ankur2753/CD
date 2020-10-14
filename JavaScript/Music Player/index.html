@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music player</title>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Music player</h1>
+    <div class="music-player-container" id="music-player-container">
+        <div class="music-info">
+            <h4 id="title"> Yaaron </h4>
+            <div class="progress-container" id="progress-conatiner">
+                <div class="progress" id="progress"></div>
+            </div>
+        </div>
+            <audio src="Yaaron.mp3" id="music"></audio>
+    
+        <div class="album-art">
+            <img src="Yaaron.jpg" alt="album-art" id="album-pic">
+        </div>
+        <div class="navigation">
+            <button id="prev" class="action-btn" title="previous Song">
+                <i class="fa fa-backward"></i>
+            </button>
+            <button id="play" class="action-btn"title="play Song">
+                <i class="fa fa-play"></i>
+            </button>
+            <button id="next" class="action-btn" title="next Song">
+                <i class="fa fa-forward"></i>
+            </button>
+        </div>
+    </div>    
+<script src="script.js"></script>
+</body>
+</html>

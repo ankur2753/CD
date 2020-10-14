@@ -1,12 +1,6 @@
-/.git
+/.gitignore
 /.vscode
 /git
-/java
-/flutter
-/c
+/TODOx-master
 /React
-/JavaScript
-hangman/index.html
-hangman/script.js
-hangman/style.css
-memoryCards/
+/c
