@@ -1,8 +1,6 @@
-/.git
+/.gitignore
 /.vscode
 /git
-/java
-/flutter
-/c
+/TODOx-master
 /React
-/JavaScript
+/c

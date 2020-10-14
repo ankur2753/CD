@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #ffcacf;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.5s linear;
+  margin: 0;
+  overflow: hidden;
+  width: 100vw;
+}
+canvas {
+  background-color: #efefef;
+  margin: 0;
+  padding: 10px;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  background-color: #a0a0a0;
+  color: #fff;
+  border: 0;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+  transition: display 0.3s linear;
+  margin: 10px;
+  width: 200px;
+}
+.btn:focus {
+  outline: 0;
+  border: 2px solid whitesmoke;
+  padding: 3px;
+}
+
+.btn:active {
+  border: 2px solid whitesmoke;
+  padding: 3px;
+}
+.how-to-play {
+  background-color: #9acf2c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  min-height: 100vh;
+  padding: 10px;
+  width: 400px;
+  transform: translateX(-400px);
+  margin: 0;
+}
+h2 {
+  margin: 0;
+  text-align: center;
+}
+body.rules {
+  transform: translateX(400px);
+}
+.show {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.modal-container{
+  display: none;
+  /* display: flex; */
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(4,4,4,0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.modal{
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  padding: 20px;
+}
+.high-scores{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  position: absolute;
+  top:-180px;
+  left: 0;
+  width: 100vw;
+  height: 180px;
+  background: rgba(65,225,234,0.9);
+  transition: transform 0.4s ease-in-out;
+}
